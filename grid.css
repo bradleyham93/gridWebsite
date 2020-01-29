@@ -1,0 +1,99 @@
+:root{
+    --silver: #BFBDC1;
+    --meat-brown: #DEB841;
+    --satin-sheen-gold: #DE9E36;
+    --onyx: #37323E
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:70px repeat(5, minmax(30vh, auto)) 100px;
+    grid-gap: 10px;
+
+    grid-template-areas:
+    "nav"
+    "hero"
+    "one"
+    "two"
+    "three"
+    "four"
+    "footer"
+    ;
+    
+}
+.nav{
+    background-color: var(--satin-sheen-gold);
+    grid-area: nav;
+}
+.hero{
+    background-color: var(--onyx);
+    grid-area: hero;
+    height: 70vh;
+}
+.one{
+    background-color: whitesmoke;
+    grid-area: one;
+}
+.two{
+    background-color: var(--meat-brown);
+    grid-area: two;
+}
+.three{
+    background-color: whitesmoke;
+    grid-area: three;
+}
+.four{
+    background-color: whitesmoke;
+    grid-area: four;
+}
+.footer{
+    background-color: var(--satin-sheen-gold);
+    grid-area: footer;
+    
+}
+
+
+@media(min-width: 560px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:70px repeat(4, minmax(30vh, auto)) 100px;
+        grid-gap: 10px;
+      
+        grid-template-areas:
+        "nav nav"
+        "hero hero"
+        "one two"
+        "three three"
+        "four four"
+        "footer footer"
+        ;
+        
+    }  
+}
+
+
+@media(min-width: 900px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:70px repeat(3, minmax(30vh, auto)) 100px;
+        grid-gap: 10px;
+      
+        grid-template-areas:
+        "nav nav nav"
+        "hero hero hero"
+        "one two three"
+        "four four four"
+        "footer footer footer"
+        ;
+        
+    }  
+}
