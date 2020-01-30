@@ -1,35 +1,24 @@
-:root{
-    --silver: #BFBDC1;
-    --meat-brown: #DEB841;
-    --satin-sheen-gold: #DE9E36;
-    --onyx: #37323E
-}
-
-body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 .grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:70px repeat(5, minmax(30vh, auto)) 100px;
-    grid-gap: 10px;
+    grid-template-rows:70px repeat(6, minmax(20vh, auto)) 100px;
+    
 
     grid-template-areas:
     "nav"
     "hero"
-    "one"
-    "two"
-    "three"
-    "four"
+    "quote"
+    "gallery"
+    "testLeft"
+    "testRight"
+    "form"
     "footer"
+    
     ;
     
 }
 .nav{
-    background-color: var(--satin-sheen-gold);
     grid-area: nav;
 }
 .hero{
@@ -37,24 +26,31 @@ body{
     grid-area: hero;
     height: 70vh;
 }
-.one{
-    background-color: whitesmoke;
-    grid-area: one;
+.quote{
+  
+    grid-area: quote;
+
 }
-.two{
-    background-color: var(--meat-brown);
-    grid-area: two;
+.testimonials--leftSide{
+    background-color: var(--light);
+    grid-area: testLeft;
 }
-.three{
-    background-color: whitesmoke;
-    grid-area: three;
+.testimonials--rightSide{
+    background-color: var(--light);
+    grid-area: testRight;
 }
-.four{
-    background-color: whitesmoke;
-    grid-area: four;
+
+.gridGallery{
+    grid-area: gallery;
+
+}
+
+.formSection{
+    background-color: var(--mid);
+    grid-area: form;
 }
 .footer{
-    background-color: var(--satin-sheen-gold);
+    background-color: var(--dark);
     grid-area: footer;
     
 }
@@ -64,15 +60,16 @@ body{
     .grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows:70px repeat(4, minmax(30vh, auto)) 100px;
-        grid-gap: 10px;
+        grid-template-rows:70px repeat(5, minmax(20vh, auto)) 100px;
+       
       
         grid-template-areas:
         "nav nav"
         "hero hero"
-        "one two"
-        "three three"
-        "four four"
+        "quote quote"
+        "testLeft testRight"
+       "form form"
+        "gallery gallery"
         "footer footer"
         ;
         
@@ -83,16 +80,18 @@ body{
 @media(min-width: 900px){
     .grid{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows:70px repeat(3, minmax(30vh, auto)) 100px;
-        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:70px repeat(5, minmax(20vh, auto)) 100px;
+
       
         grid-template-areas:
-        "nav nav nav"
-        "hero hero hero"
-        "one two three"
-        "four four four"
-        "footer footer footer"
+        "nav nav"
+        "hero hero"
+        "quote quote"
+        "gallery gallery"
+        "testLeft testRight"
+        "form form"
+        "footer footer"
         ;
         
     }  
